@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>The Three Musketeers VR - Chapter One: The Three Presents</title>
+<link rel="stylesheet" href="style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="hud">
+    <div id="hud-title">THE THREE MUSKETEERS <span>· VR Chapter</span></div>
+    <div id="hud-chapter">Chapter One - The Three Presents</div>
+    <div id="hud-inventory">
+      <div class="hud-item" id="item-horse">🐴 Horse</div>
+      <div class="hud-item" id="item-purse">💰 15 Crowns</div>
+      <div class="hud-item" id="item-letter">📜 Letter to Tréville</div>
+    </div>
+    <div id="hud-help">
+      Desktop: click to look around (mouse) · WASD to walk · Esc to release mouse<br/>
+      VR headset: use the "Enter VR" button below, then walk forward or point &amp; pull the trigger on the floor to teleport
+    </div>
+  </div>
+
+  <div id="blocker">
+    <div id="blocker-text">
+      <h1>You are entering the story</h1>
+      <p>Gascony, France — 1625</p>
+      <p class="small">Click anywhere to begin (desktop) or use the VR button below for a headset.</p>
+    </div>
+  </div>
+
+  <div id="fade"></div>
+
+  <div id="vr-button-holder"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

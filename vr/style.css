@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0a0a08; font-family: 'Georgia', 'Times New Roman', serif; }
+canvas { display: block; }
+
+#hud {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 14px 20px;
+  color: #f2e6c9;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+  pointer-events: none;
+  z-index: 5;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0));
+}
+#hud-title { font-size: 20px; letter-spacing: 2px; font-weight: bold; }
+#hud-title span { font-size: 12px; letter-spacing: 1px; opacity: 0.7; font-style: italic; }
+#hud-chapter { font-size: 13px; opacity: 0.85; margin-top: 2px; font-style: italic; }
+#hud-inventory { display: flex; gap: 14px; margin-top: 10px; }
+.hud-item { font-size: 13px; padding: 4px 10px; border: 1px solid rgba(242,230,201,0.35); border-radius: 4px; opacity: 0.35; transition: opacity 0.4s, background 0.4s; }
+.hud-item.collected { opacity: 1; background: rgba(242,230,201,0.15); border-color: #f2e6c9; }
+#hud-help { font-size: 11px; margin-top: 10px; opacity: 0.6; max-width: 480px; line-height: 1.5; }
+
+#blocker {
+  position: fixed; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(20,15,5,0.55) 0%, rgba(5,5,5,0.92) 100%);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 20; cursor: pointer;
+}
+#blocker.hidden { display: none; }
+#blocker-text { text-align: center; color: #f2e6c9; }
+#blocker-text h1 { font-size: 40px; margin: 0 0 6px 0; letter-spacing: 2px; }
+#blocker-text p { margin: 4px 0; font-size: 16px; opacity: 0.85; font-style: italic; }
+#blocker-text p.small { font-size: 12px; opacity: 0.6; margin-top: 18px; font-style: normal; }
+
+#fade {
+  position: fixed; inset: 0; background: #000; opacity: 0;
+  pointer-events: none; transition: opacity 0.6s ease; z-index: 15;
+}
+#fade.on { opacity: 1; }
+
+#vr-button-holder { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); z-index: 10; }
+#vr-button-holder button {
+  font-family: 'Georgia', serif !important;
+}
